@@ -1,12 +1,9 @@
 console.log("hi varsha");
-
 if(Meteor.isClient){
-
   Template.leaderboard.events({ 'click': function(){
         console.log("You clicked something");
     }
   });
-
   Template.leaderboard.helpers({
     'player': function(){
         return PlayersList.find()
@@ -15,7 +12,6 @@ if(Meteor.isClient){
         return "Some other function"
     }
   });
-
  }
 if(Meteor.isServer){
 console.log("Hello Server");
